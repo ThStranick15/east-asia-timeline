@@ -1,0 +1,10 @@
+main {
+    text-align: center;
+    .vLine{
+        border-left: 6px solid red;
+        height: 500px;
+        left: 50%;
+        position:absolute;
+        z-index: -1;
+    }
+}
