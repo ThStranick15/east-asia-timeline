@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-event',
@@ -8,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './event.component.scss'
 })
 export class EventComponent {
+  @Input() side: string;
 
+  constructor() {
+    this.side = 'left';
+  }
 }

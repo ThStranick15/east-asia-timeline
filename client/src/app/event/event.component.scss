@@ -1,4 +1,17 @@
 .event{
     border: 5px solid black;
     margin: 3px;
+    width: 100%;
+    scale: 100%;
+    transition: scale 1s ease-in-out;
+    cursor: pointer;
+    &:hover{
+        scale: 130%;
+    }
+}
+.left{
+    // float: left;
+}
+.right{
+    // float: right;
 }

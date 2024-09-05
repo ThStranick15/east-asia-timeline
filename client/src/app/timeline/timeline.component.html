@@ -1,6 +1,14 @@
 <main>
-    <h2>Timeline</h2>
+    <h2 id="timelineHeader">Timeline</h2>
     <div class="vLine"></div>
-    <app-event/>
-    <app-event/>
+    <div class="grid">
+        <app-event />
+        <app-event [side]="'right'"/>
+        <app-event/>
+        <app-event [side]="'right'"/>
+        <app-event/>
+        <app-event [side]="'right'"/>
+        <app-event/>
+        <app-event [side]="'right'"/>
+    </div>
 </main>

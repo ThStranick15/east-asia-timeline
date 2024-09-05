@@ -8,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-
+  scrollToTimeline(id: string){
+    let el = document.getElementById(id)
+    el?.scrollIntoView({behavior: 'smooth'});
+  }
 }
