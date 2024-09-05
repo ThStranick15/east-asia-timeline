@@ -1,10 +1,19 @@
 main {
+    position: relative;
     text-align: center;
+    overflow: hidden;
+    height: 100vh;
     .vLine{
-        border-left: 6px solid red;
-        height: 500px;
+        position: absolute;
+        border-left: 6px solid darkred;
+        height: 100%;
         left: 50%;
-        position:absolute;
         z-index: -1;
     }
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        justify-items: center;
+    }
+
 }
