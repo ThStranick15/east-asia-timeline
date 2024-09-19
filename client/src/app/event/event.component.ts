@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Event } from '../event/event.interface';
 
 @Component({
   selector: 'app-event',
@@ -8,9 +9,23 @@ import { Component, Input } from '@angular/core';
   styleUrl: './event.component.scss'
 })
 export class EventComponent {
-  @Input() side: string;
+  @Input() event: Event;
 
-  constructor() {
-    this.side = 'left';
+  convertDate(date: number): string{
+    if(date < 0){
+      return Math.abs(date).toString() + ' BC'
+    }
+    else{
+      return date.toString() + ' AD'
+    }
+  }
+  
+  constructor(){
+    this.event = {
+      name: '',
+      img: '',
+      text: '',
+      date: 0
+    }
   }
 }
