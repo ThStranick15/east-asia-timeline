@@ -3,10 +3,11 @@
         <h1>An Introductory Timeline of Chinese (中国) History</h1>
     </div>
     <div class="imgcontainer">
-        <img srcset="\images\GreatWall.JPG 480w, \images\GreatWall2.JPG 800w" 
-        sizes="(max-width:600px) 480px, 800px "
-        alt="The Great Wall of China"
-        src="\images\GreatWall2.JPG">
+        <picture>
+            <source media="(min-width: 801px)" srcset="/images/GreatWall2.JPG">
+            <source media="(max-width: 800px)" srcset="/images/GreatWall.JPG">
+            <img src="/images/GreatWall2.JPG" alt="Great Wall of China">
+        </picture>
         <p class="caption">The Great Wall of China - Thomas Stranick</p>
     </div>
     <div class="headline">
