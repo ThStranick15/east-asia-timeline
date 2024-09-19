@@ -1,14 +1,100 @@
 <main>
     <h2 id="timelineHeader">Timeline</h2>
-    <div class="vLine"></div>
-    <div class="grid">
-        <app-event/>
-        <app-event/>
-        <app-event/>
-        <app-event/>
-        <app-event/>
-        <app-event/>
-        <app-event/>
-        <app-event/>
+    <p>Click each event to learn more!</p>
+    <app-detail/>
+    <div class="timeline">
+        <div class="vLine"></div>
+        <div class="divider">
+            <h3>Xia 2070 - 1600 BC</h3>
+        </div>
+        <div class="grid">
+            <ng-container *ngFor="let event of events">
+                <ng-container *ngIf="event.date < -1600">
+                    <app-event [event]="event" (click)="openDetail(event)"/>
+                </ng-container>
+            </ng-container>
+        </div>
+        <div class="divider">
+            <h3>Shang 1600 - 1046 BC</h3>
+        </div>
+        <div class="grid" >
+            <ng-container *ngFor="let event of events">
+                <ng-container *ngIf="(event.date < -1050) && (event.date > -1601)">
+                    <app-event [event]="event" (click)="openDetail(event)"/>
+                </ng-container>
+            </ng-container>
+        </div>
+        <div class="divider">
+            <h3>Zhou 1050 - 256 BC</h3>
+        </div>
+        <div class="grid">
+            <ng-container *ngFor="let event of events">
+                <ng-container *ngIf="(event.date < -256) && (event.date > -1051)">
+                    <app-event [event]="event" (click)="openDetail(event)"/>
+                </ng-container>
+            </ng-container>
+        </div>
+        <div class="divider">
+            <h3>Qin 221 -206 BC</h3>
+        </div>
+        <div class="grid">
+            <ng-container *ngFor="let event of events">
+                <ng-container *ngIf="(event.date < -206) && (event.date > -222)">
+                    <app-event [event]="event" (click)="openDetail(event)"/>
+                </ng-container>
+            </ng-container>
+        </div>
+        <div class="divider">
+            <h3>Han (Former & Latter) 202 BC - 220 AD</h3>
+        </div>
+        <div class="grid">
+            <ng-container *ngFor="let event of events">
+                <ng-container *ngIf="(event.date < 220) && (event.date > -203)">
+                    <app-event [event]="event" (click)="openDetail(event)"/>
+                </ng-container>
+            </ng-container>
+        </div>
+        <div class="divider">
+            <h3>Tang 618 - 907 AD</h3>
+        </div>
+        <div class="grid">
+            <ng-container *ngFor="let event of events">
+                <ng-container *ngIf="(event.date < 907) && (event.date > 617)">
+                    <app-event [event]="event" (click)="openDetail(event)"/>
+                </ng-container>
+            </ng-container>
+        </div>
+        <div class="divider">
+            <h3>Song 960 - 1279 AD</h3>
+        </div>
+        <div class="grid">
+            <ng-container *ngFor="let event of events">
+                <ng-container *ngIf="(event.date < 1279) && (event.date > 959)">
+                    <app-event [event]="event" (click)="openDetail(event)"/>
+                </ng-container>
+            </ng-container>
+        </div>
+        <div class="divider">
+            <h3>Ming 1368 - 1644 AD</h3>
+        </div>
+        <div class="grid">
+            <ng-container *ngFor="let event of events">
+                <ng-container *ngIf="(event.date < 1644) && (event.date > 1367)">
+                    <app-event [event]="event" (click)="openDetail(event)"/>
+                </ng-container>
+            </ng-container>
+        </div>
+        <div class="divider">
+            <h3>Qing 1644 - 1912 AD</h3>
+        </div>
+        <div class="grid">
+            <ng-container *ngFor="let event of events">
+                <ng-container *ngIf="(event.date < 1912) && (event.date > 1643)">
+                    <app-event [event]="event" (click)="openDetail(event)"/>
+                </ng-container>
+            </ng-container>
+        </div>
     </div>
+    
+    
 </main>
