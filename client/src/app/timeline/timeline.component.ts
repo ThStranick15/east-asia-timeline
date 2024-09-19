@@ -23,10 +23,24 @@ export class TimelineComponent implements OnInit{
       const res = await fetch('/api/events');
       const data = await res.json();
       console.log(data)
+      data.sort(this.sortEvents)
+      console.log(data)
       this.events = data;
     } catch (error) {
       console.log(error)
     }
+  }
+
+  sortEvents(a: Event, b: Event){
+    const date1 = a.date;
+    const date2 = b.date;
+    let compare = 0;
+    if(date1 > date2){
+      compare = 1
+    } else if(date1 < date2){
+      compare = -1
+    }
+    return compare
   }
 
   convertDate(date: number): string{
